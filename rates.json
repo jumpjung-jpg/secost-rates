@@ -1,0 +1,168 @@
+{
+  "version": "2025.1",
+  "updated": "2025-01-01",
+  "ins": {
+    "pension":    { "empRate": 0.045, "erRate": 0.045, "min": 370000, "max": 5900000 },
+    "health":     { "empRate": 0.03545, "erRate": 0.03545, "ltcRatio": 0.1295 },
+    "employment": { "empRate": 0.009, "erRate": 0.009,
+      "stabilization": { "under150": 0.0025, "under1000": 0.0045, "over1000": 0.0065 } },
+    "accident":   {
+      "금융/보험/통신": 0.006, "도소매/음식/숙박": 0.009, "건설업": 0.036,
+      "제조업": 0.013, "운수/창고": 0.013, "농림어업": 0.025, "광업": 0.058, "기타": 0.010
+    }
+  },
+  "taxBrackets": [
+    { "max": 14000000,   "rate": 0.06 },
+    { "max": 50000000,   "rate": 0.15 },
+    { "max": 88000000,   "rate": 0.24 },
+    { "max": 150000000,  "rate": 0.35 },
+    { "max": 300000000,  "rate": 0.38 },
+    { "max": 500000000,  "rate": 0.40 },
+    { "max": 1000000000, "rate": 0.42 },
+    { "max": null,       "rate": 0.45 }
+  ],
+  "empDeduction": [
+    { "max": 5000000,   "rate": 0.70 },
+    { "max": 15000000,  "rate": 0.40, "base": 3500000 },
+    { "max": 45000000,  "rate": 0.15, "base": 7500000 },
+    { "max": 100000000, "rate": 0.05, "base": 12000000 },
+    { "max": null,      "rate": 0.02, "base": 14750000 }
+  ],
+  "taxCreditMax": { "under33": 740000, "under70": 660000, "over70": 500000 },
+  "localHealth": {
+    "income": [
+      { "max": 336000,   "s": 0   }, { "max": 700000,   "s": 15  }, { "max": 1000000,  "s": 24  },
+      { "max": 2000000,  "s": 37  }, { "max": 3000000,  "s": 49  }, { "max": 5000000,  "s": 67  },
+      { "max": 7000000,  "s": 81  }, { "max": 10000000, "s": 96  }, { "max": 20000000, "s": 126 },
+      { "max": 30000000, "s": 153 }, { "max": 50000000, "s": 192 }, { "max": 80000000, "s": 236 },
+      { "max": null,     "s": 293 }
+    ],
+    "property": [
+      { "max": 45000000,  "s": 0   }, { "max": 68000000,  "s": 29  }, { "max": 97000000,  "s": 59  },
+      { "max": 136000000, "s": 89  }, { "max": 192000000, "s": 119 }, { "max": 271000000, "s": 149 },
+      { "max": 381000000, "s": 179 }, { "max": null,      "s": 208 }
+    ],
+    "unitPrice": 208.4, "ltcRatio": 0.1295, "minPremium": 19780
+  },
+  "acq": {
+    "surcharges": { "rural": 0.10, "edu": 0.20 }
+  },
+  "cgt": {
+    "shortTerm": { "lt1": 0.70, "lt2": 0.60 },
+    "multi":     { "two": 0.20, "three": 0.30 },
+    "ltDeductionHolding": { "3":0.06,"4":0.08,"5":0.10,"6":0.12,"7":0.14,"8":0.16,"9":0.18,"10":0.20,"11":0.22,"12":0.24,"13":0.26,"14":0.28,"15":0.30 },
+    "ltDeductionBoth":    { "3":0.12,"4":0.16,"5":0.20,"6":0.24,"7":0.28,"8":0.32,"9":0.36,"10":0.40,"11":0.44,"12":0.48,"13":0.52,"14":0.56,"15":0.60,"16":0.64,"17":0.68,"18":0.72,"19":0.76,"20":0.80 },
+    "exemptLimit": 1200000000, "localTax": 0.10
+  },
+  "cret": {
+    "oneTwo": { "deduction": 900000000, "brackets": [
+      { "max": 300000000,  "rate": 0.005 }, { "max": 600000000,  "rate": 0.007 },
+      { "max": 1200000000, "rate": 0.010 }, { "max": 2500000000, "rate": 0.013 },
+      { "max": 9400000000, "rate": 0.020 }, { "max": null,       "rate": 0.027 }
+    ]},
+    "threePlus": { "deduction": 500000000, "brackets": [
+      { "max": 300000000,  "rate": 0.012 }, { "max": 600000000,  "rate": 0.016 },
+      { "max": 1200000000, "rate": 0.022 }, { "max": 2500000000, "rate": 0.036 },
+      { "max": 9400000000, "rate": 0.050 }, { "max": null,       "rate": 0.060 }
+    ]},
+    "fairMarket": 0.60, "ruralTax": 0.20
+  },
+  "propTax": {
+    "housing": { "fairMarket": 0.60, "brackets": [
+      { "max": 60000000,  "rate": 0.001 },
+      { "max": 150000000, "rate": 0.0015, "deduction": 30000 },
+      { "max": 300000000, "rate": 0.0025, "deduction": 180000 },
+      { "max": null,      "rate": 0.004,  "deduction": 630000 }
+    ]},
+    "surcharges": { "edu": 0.20, "urban": 0.0014 }
+  },
+  "brokerage": {
+    "sale": [
+      { "max": 50000000,  "rate": 0.006, "maxFee": 250000 },
+      { "max": 200000000, "rate": 0.005, "maxFee": 800000 },
+      { "max": 600000000, "rate": 0.004 },
+      { "max": 900000000, "rate": 0.005 },
+      { "max": null,      "rate": 0.009 }
+    ],
+    "rent": [
+      { "max": 50000000,  "rate": 0.005, "maxFee": 200000 },
+      { "max": 100000000, "rate": 0.004, "maxFee": 300000 },
+      { "max": 600000000, "rate": 0.003 },
+      { "max": 900000000, "rate": 0.004 },
+      { "max": null,      "rate": 0.008 }
+    ]
+  },
+  "inherit": {
+    "brackets": [
+      { "max": 100000000,  "rate": 0.10 },
+      { "max": 500000000,  "rate": 0.20 },
+      { "max": 1000000000, "rate": 0.30 },
+      { "max": 3000000000, "rate": 0.40 },
+      { "max": null,       "rate": 0.50 }
+    ],
+    "inheritDeduction": 500000000,
+    "giftDeductions": {
+      "spouse": 600000000, "adultChild": 50000000, "minorChild": 20000000,
+      "parent": 50000000, "other": 10000000
+    }
+  },
+  "elec": {
+    "normal":  [{ "max": 200, "base": 910, "unit": 120.0 }, { "max": 400, "base": 1600, "unit": 214.6 }, { "max": null, "base": 7300, "unit": 307.3 }],
+    "summer":  [{ "max": 300, "base": 910, "unit": 120.0 }, { "max": 450, "base": 1600, "unit": 214.6 }, { "max": null, "base": 7300, "unit": 307.3 }],
+    "winter":  [{ "max": 200, "base": 910, "unit": 120.0 }, { "max": 400, "base": 1600, "unit": 214.6 }, { "max": null, "base": 7300, "unit": 307.3 }],
+    "climate": 9.0, "fuel": 5.0, "vat": 0.10, "fund": 0.037, "tv": 2500
+  },
+  "gas": {
+    "seoul":    { "basic": 1800, "winter": 21.5, "summer": 18.9 },
+    "gyeonggi": { "basic": 1600, "winter": 20.8, "summer": 18.3 },
+    "busan":    { "basic": 1900, "winter": 22.1, "summer": 19.4 },
+    "daegu":    { "basic": 1700, "winter": 21.2, "summer": 18.7 },
+    "incheon":  { "basic": 1600, "winter": 20.5, "summer": 18.0 },
+    "gwangju":  { "basic": 1700, "winter": 21.8, "summer": 19.0 },
+    "daejeon":  { "basic": 1650, "winter": 21.0, "summer": 18.5 },
+    "other":    { "basic": 1700, "winter": 21.3, "summer": 18.8 },
+    "conv": 43.1, "vat": 0.10
+  },
+  "water": {
+    "seoul":    { "h": [{"max":30,"r":350},{"max":null,"r":550}], "s": [{"max":30,"r":430},{"max":null,"r":630}], "b": {"d15":1050,"d20":1650,"d25":2090} },
+    "gyeonggi": { "h": [{"max":30,"r":420},{"max":null,"r":620}], "s": [{"max":30,"r":380},{"max":null,"r":550}], "b": {"d15":900,"d20":1400,"d25":1800} },
+    "busan":    { "h": [{"max":30,"r":380},{"max":null,"r":580}], "s": [{"max":30,"r":400},{"max":null,"r":590}], "b": {"d15":1000,"d20":1500,"d25":1900} },
+    "other":    { "h": [{"max":30,"r":400},{"max":null,"r":600}], "s": [{"max":30,"r":400},{"max":null,"r":580}], "b": {"d15":950,"d20":1450,"d25":1850} },
+    "wuf": 170
+  },
+  "mgmt": {
+    "general": { "office": 200, "clean": 150, "security": 200, "disinfect": 20, "elevator": 100, "repair": 150, "elec": 80, "water": 30, "ins": 20 },
+    "ltFund": 250,
+    "heating": { "winter": 1800, "summer": 200 }
+  },
+  "car": {
+    "tax": {
+      "nonComm": [{ "max": 1000, "r": 80 }, { "max": 1600, "r": 140 }, { "max": null, "r": 200 }],
+      "comm":    [{ "max": 1000, "r": 18 }, { "max": 1600, "r": 18 },  { "max": null, "r": 19  }],
+      "electric": 100000, "hydrogen": 100000,
+      "eduTax": 0.30,
+      "earlyPay": { "january": 0.10, "march": 0.075, "june": 0.05, "september": 0.025 },
+      "ageDiscount": { "startYear": 3, "perYear": 0.05, "max": 0.50 }
+    },
+    "acq": {
+      "passenger": { "nonComm": 0.07, "comm": 0.04 },
+      "van":       { "nonComm": 0.05, "comm": 0.04 },
+      "truck":     { "nonComm": 0.05, "comm": 0.04 },
+      "motorcycle": 0.02,
+      "bond": {
+        "seoul":    { "below1600": 0.09, "above1600": 0.12, "electric": 0.07 },
+        "gyeonggi": { "below1600": 0.06, "above1600": 0.08, "electric": 0.05 },
+        "others":   { "below1600": 0.04, "above1600": 0.05, "electric": 0.03 }
+      }
+    },
+    "license": {
+      "exam": { "written": 10000, "func": 25000, "road": 25000, "issue": 12500 },
+      "academy": {
+        "type1":      { "seoul": {"min":700000,"max":1000000}, "metropolitan": {"min":600000,"max":900000}, "province": {"min":500000,"max":800000} },
+        "type2":      { "seoul": {"min":550000,"max":800000}, "metropolitan": {"min":450000,"max":700000}, "province": {"min":400000,"max":600000} },
+        "motorcycle": { "all": {"min":200000,"max":400000} }
+      }
+    },
+    "inspection": { "compact": 23000, "passenger": 23000, "van": 26000 }
+  }
+}
